@@ -1,0 +1,19 @@
+<svg height="128.689" viewBox="0 0 238.707 128.689" width="238.707"
+    xmlns="http://www.w3.org/2000/svg">
+    <g id="Logo" transform="translate(0 4.189)">
+        <path d="M0,32.759,144.15,0" data-name="Path 1" fill="#6735aa" id="Path_1" stroke="#6735aa"
+            stroke-width="6" transform="translate(1.829)" />
+        <line data-name="Line 2" fill="none" id="Line_2" stroke="#6735aa" stroke-linecap="round"
+            stroke-width="6" transform="translate(145.979)" x1="88.539" y1="64.063" />
+        <line data-name="Line 3" fill="none" id="Line_3" stroke="#6735aa" stroke-width="6"
+            transform="translate(161.346 64.063)" x1="72.441" />
+        <line data-name="Line 4" fill="none" id="Line_4" stroke="#6735aa" stroke-width="6"
+            transform="translate(234.518 64.063)" y2="44.407" />
+        <text data-name="pocket
+properties" fill="#6735aa" font-family="AvenirNext-Medium, Avenir Next" font-size="47"
+            font-weight="500" id="pocket_properties" transform="translate(0 67.5)">
+            <tspan x="0" y="0">pocket</tspan>
+            <tspan x="0" y="40">properties</tspan>
+        </text>
+    </g>
+</svg>
