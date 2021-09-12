@@ -1,0 +1,7 @@
+<svg id="Component_7_1" data-name="Component 7 – 1" xmlns="http://www.w3.org/2000/svg" width="119" height="116" viewBox="0 0 119 116">
+  <ellipse id="Ellipse_4" data-name="Ellipse 4" cx="59.5" cy="58" rx="59.5" ry="58" fill="#fff"/>
+  <g id="phone" transform="translate(34.441 30.389)">
+    <path id="Path_16" data-name="Path 16" d="M36.045,3.451H14.074A3.561,3.561,0,0,0,10.412,6.9V48.319a3.561,3.561,0,0,0,3.662,3.451H36.045a3.561,3.561,0,0,0,3.662-3.451V6.9A3.561,3.561,0,0,0,36.045,3.451ZM14.074,0A7.123,7.123,0,0,0,6.75,6.9V48.319a7.123,7.123,0,0,0,7.324,6.9H36.045a7.123,7.123,0,0,0,7.324-6.9V6.9A7.123,7.123,0,0,0,36.045,0Z" transform="translate(0)" fill="#6a39b0" fill-rule="evenodd"/>
+    <path id="Path_17" data-name="Path 17" d="M18,31.5a2.25,2.25,0,1,0-2.25-2.25A2.25,2.25,0,0,0,18,31.5Z" transform="translate(7.059 19.222)" fill="#6a39b0" fill-rule="evenodd"/>
+  </g>
+</svg>
