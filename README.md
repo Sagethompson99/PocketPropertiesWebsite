@@ -1,3 +1,3 @@
 # PocketPropertiesWebsite
 
-A website created for Pocket Properties woo woo
+A website created for Pocket Properties
