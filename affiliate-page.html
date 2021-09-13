@@ -1,1 +1,145 @@
-<html></html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="styles.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <title>Pocket Properties</title>
+        <link rel="manifest" href="manifest.json">
+        <link rel="apple-touch-icon" href="Apple-touch-icon.png"> 
+        <meta name="apple-mobile-web-app-status-bar-style" content="white">   
+        <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+        <script src="https://kit.fontawesome.com/984a991b1b.js" crossorigin="anonymous"></script>
+
+   	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head> 
+    <body>
+        <div class="page-content">
+            <nav>
+                <img class="logo" src="assets/logo_purple.svg" alt="logo" width="75px">
+                <a class="large-screen-nav" href="index.html">Home</a>
+                <a class="large-screen-nav" href="https://wefunder.com/pocket.properties.app">Invest</a>
+                <a class="large-screen-nav" href="alpha-release-page.html">Alpha Release</a>
+                <a class="large-screen-nav" href="sell-page.html">Sell Your Property</a>
+                <a class="large-screen-nav" id="active" href="#">Become an Affiliate</a>
+                <img class="sidenav-open-button" src="assets/custom-icons/navbar-icon.svg" onclick="openNav()" alt="navbar-expand">
+            </nav>
+            <div class="sidenav" id="sidenav">
+                <img id="sidenav-close-button" class="sidenav-close-button" src="assets/custom-icons/white-sidenav-icon.svg" onclick="closeNav()" alt="navbar-expand">
+                <a class="large-screen-nav" href="index.html">Home</a>
+                <a class="large-screen-nav" href="https://wefunder.com/pocket.properties.app">Invest</a>
+                <a class="large-screen-nav" href="alpha-release-page.html">Alpha Release</a>
+                <a class="large-screen-nav" href="sell-page.html">Sell Your Property</a>
+                <a class="large-screen-nav" id="active" href="#"">Become an Affiliate</a>
+            </div>
+            <div class="row" id="homepage-top-content">
+                <div class="col">
+                    <h1 id="main-title">Help Us Spread the Word.</h1>
+                    <p>
+                        Pocket Properties was made for everyone. We're looking for content creators to help get the word out. Join our affiliate program to earn shares of property for your content and engage with the growing Pocket Properties community. 
+                    </p>
+                </div>
+                <div class="spacer"></div>
+                <div class="col">
+                    <img class="rellax phone-image" data-rellax-speed="2" src="assets/images/thumbs-up.png" style="z-index: 10" alt="house image" width="95%">
+                </div>
+            </div>
+            
+        </div>
+        <div class="page-content" style="padding-bottom: 80; padding-top: 10">
+            <h1 style="color: #6A39B0; font-size: 40; margin: 120 0 60 0">How does it Work?</h1>
+            <div class="row">
+                <div class="col">
+                    <div class="info-block js-scroll fade-in-bottom" style="color: black">
+                        <h2 style="color: 6A39B0">Apply</h2>
+                        <p style="color: black">
+                            Email us at zr@pocketpropertiesapp.com. Place "Affiliate Application" in the subject. 
+                            Include your first & last name, social media links, and relevant content links in the 
+                            body of the email. Then send it over!
+                        </p>
+                    </div>
+                </div>
+                <div class="spacer"></div>
+                <div class="col">
+                    <div class="info-block js-scroll fade-in-bottom" style="color: black">
+                        <h2 style="color: 6A39B0">Share</h2>
+                        <p style="color: black">
+                            Now's the fun part, share your link with the communities that you've worked so hard to build. 
+                            Help them be the first to take advantage of fractional real estate.
+                        </p>
+                    </div>
+                </div>
+                <div class="spacer"></div>
+                <div class="col">
+                    <div class="info-block js-scroll fade-in-bottom" style="color: black">
+                        <h2 style="color: 6A39B0">Collect</h2>
+                        <p style="color: black">
+                            You'll receive one share per 5 members from your affiliate link! 
+                            Shares will be distributed quarterly once the platform launches. 
+                            In the meantime we'll send you quarterly updates with your communities metrics.
+                        </p>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="row">
+            </div>
+        </div>
+       
+        <script>
+            var rellax = new Rellax('.rellax');
+            const scrollElements = document.querySelectorAll(".js-scroll");
+
+            const elementInView = (el, dividend = 1) => {
+                const elementTop = el.getBoundingClientRect().top;
+
+                return (
+                    elementTop <=
+                    (window.innerHeight || document.documentElement.clientHeight) / dividend);
+            };
+
+            const elementOutofView = (el) => {
+                const elementTop = el.getBoundingClientRect().top;
+
+                return (
+                    elementTop > (window.innerHeight || document.documentElement.clientHeight)
+                );
+            };
+
+            const displayScrollElement = (element) => {
+                element.classList.add("scrolled");
+            };
+
+            const hideScrollElement = (element) => {
+                element.classList.remove("scrolled");
+            };
+
+            const handleScrollAnimation = () => {
+                scrollElements.forEach((el) => {
+                    if (elementInView(el, 1.25)) {
+                    displayScrollElement(el);
+                    } else if (elementOutofView(el)) {
+                    hideScrollElement(el)
+                    }
+                })
+            }
+
+            window.addEventListener("scroll", () => { 
+                handleScrollAnimation();
+            });
+
+            function openNav() {
+                var closeNav = $('.sidenav-close-button');
+                document.getElementById("sidenav").style.marginRight = "0";	
+                closeNav.toggleClass('rotate');
+            }
+
+            function closeNav() {
+                var closeNav = $('.sidenav-close-button');
+                document.getElementById("sidenav").style.marginRight = "-321";	
+                closeNav.toggleClass('rotate');
+            }
+        </script>
+    </body>
+</html>
