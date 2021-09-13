@@ -1,0 +1,12 @@
+{
+  "name": "Pocket Properties",
+  "short_name": "Pocket Properties",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "description": "Buy and sell fractional shares of real estate for as little as $10",
+  "icons": [{
+    "src": "Apple-touch-icon.png",
+    "sizes": "150x150"
+  }]
+}
