@@ -1,1 +1,148 @@
-<html></html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="styles.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <title>Pocket Properties</title>
+        <link rel="manifest" href="manifest.json">
+        <link rel="apple-touch-icon" href="Apple-touch-icon.png"> 
+        <meta name="apple-mobile-web-app-status-bar-style" content="white">   
+        <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+        <script src="https://kit.fontawesome.com/984a991b1b.js" crossorigin="anonymous"></script>
+
+   	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head> 
+    <body>
+        <div class="page-content">
+            <nav>
+                <img class="logo" src="assets/logo_purple.svg" alt="logo" width="75px">
+                <a class="large-screen-nav" href="index.html">Home</a>
+                <a class="large-screen-nav" href="https://wefunder.com/pocket.properties.app">Invest</a>
+                <a class="large-screen-nav" href="alpha-release-page.html">Alpha Release</a>
+                <a class="large-screen-nav" id="active" href="#">Sell Your Property</a>
+                <a class="large-screen-nav" href="affiliate-page.html">Become an Affiliate</a>
+                <img class="sidenav-open-button" src="assets/custom-icons/navbar-icon.svg" onclick="openNav()" alt="navbar-expand">
+            </nav>
+            <div class="sidenav" id="sidenav">
+                <img id="sidenav-close-button" class="sidenav-close-button" src="assets/custom-icons/white-sidenav-icon.svg" onclick="closeNav()" alt="navbar-expand">
+                <a class="large-screen-nav" href="index.html">Home</a>
+                <a class="large-screen-nav" href="https://wefunder.com/pocket.properties.app">Invest</a>
+                <a class="large-screen-nav" href="alpha-release-page.html">Alpha Release</a>
+                <a class="large-screen-nav" id="active" href="#">Sell Your Property</a>
+                <a class="large-screen-nav" href="affiliate-page.html">Become an Affiliate</a>
+            </div>
+            <div class="row" id="homepage-top-content">
+                <div class="col">
+                    <h1 id="main-title">Sell Us Your Portfolio.</h1>
+                    <p>
+                        Have some prime real estate on your hand that you're looking to sell? Be among the first few who have experienced the advantages of selling their portfolio through the Pocket Properties platform. 
+                    </p>
+                </div>
+                <div class="spacer"></div>
+                <div class="col">
+                    <img class="rellax phone-image" data-rellax-speed="2" src="assets/images/house1.png" style="z-index: 10" alt="house image" width="95%">
+                </div>
+            </div>
+            
+        </div>
+        <div class="page-content" style="padding-bottom: 80; padding-top: 10">
+            <h1 style="color: #6A39B0; font-size: 40; margin: 80 0 100 0">Advantages</h1>
+            <div class="row">
+                <div class="col">
+                    <img class="rellax phone-image" data-rellax-speed="1" src="assets/images/house2.png" style="z-index: 10" alt="house image" width="95%">
+                </div>
+                <div class="col">
+                    <div class="info-block js-scroll fade-in-bottom" style="color: black">
+                        <ul>
+                            <li>Earn 100% market price for each of your properties</li>
+                        </ul>
+                        <ul>
+                            <li>Pay no realtor fees, commissions, or closing fees</li>
+                        </ul>
+                        <ul>
+                            <li>You have the option to retain a portion of your properties as shares on the Pocket Properties platform</li>
+                        </ul>
+                        <ul>
+                            <li>Cash in on forced appreciation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            </div>
+        </div>
+        <div class="page-content" style="padding-bottom: 200; padding-top: 10">
+            <h1 style="color: #6A39B0; font-size: 40; margin: 80 0 40 0">Get Started</h1>
+            <div class="row">
+                <div class="col">
+                    <div class="info-block js-scroll fade-in-bottom" style="color: black">
+                        <p>Email us a link, folder, list, or attachment containing your properties addresses to jr@pocketpropertiesapp.com</p>
+                        <p>Please allow our acquisitions team up to 48 hours to respond. Once we've selected the properties we're interested we'll set up a brief 10 minute call to cover the details.
+                        We look forward to working with you!</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img class="rellax phone-image" data-rellax-speed="0" src="assets/images/house2.png" style="z-index: 10" alt="house image" width="90%">
+                </div>
+            </div>
+            <div class="row">
+            </div>
+        </div>
+        <script>
+            var rellax = new Rellax('.rellax');
+            const scrollElements = document.querySelectorAll(".js-scroll");
+
+            const elementInView = (el, dividend = 1) => {
+                const elementTop = el.getBoundingClientRect().top;
+
+                return (
+                    elementTop <=
+                    (window.innerHeight || document.documentElement.clientHeight) / dividend);
+            };
+
+            const elementOutofView = (el) => {
+                const elementTop = el.getBoundingClientRect().top;
+
+                return (
+                    elementTop > (window.innerHeight || document.documentElement.clientHeight)
+                );
+            };
+
+            const displayScrollElement = (element) => {
+                element.classList.add("scrolled");
+            };
+
+            const hideScrollElement = (element) => {
+                element.classList.remove("scrolled");
+            };
+
+            const handleScrollAnimation = () => {
+                scrollElements.forEach((el) => {
+                    if (elementInView(el, 1.25)) {
+                    displayScrollElement(el);
+                    } else if (elementOutofView(el)) {
+                    hideScrollElement(el)
+                    }
+                })
+            }
+
+            window.addEventListener("scroll", () => { 
+                handleScrollAnimation();
+            });
+
+            function openNav() {
+                var closeNav = $('.sidenav-close-button');
+                document.getElementById("sidenav").style.marginRight = "0";	
+                closeNav.toggleClass('rotate');
+            }
+
+            function closeNav() {
+                var closeNav = $('.sidenav-close-button');
+                document.getElementById("sidenav").style.marginRight = "-321";	
+                closeNav.toggleClass('rotate');
+            }
+        </script>
+    </body>
+</html>
