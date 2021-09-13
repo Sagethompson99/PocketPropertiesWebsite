@@ -81,65 +81,103 @@
                         </p>
                     </div>
                 </div>
-                </div>
-            </div>
-            <div class="row">
             </div>
         </div>
+        <div class="page-content" style="padding-bottom: 120; padding-top: 20">
+            <h1 style="color: #6A39B0; font-size: 40; margin: 120 0 60 0">Affiliate Program Tiers</h1>
+            <div class="row">
+                <div class="col">
+                    <div class="info-block js-scroll fade-in-bottom" style="color: black">
+                        <h2 style="color: 6A39B0">Tier 1</h2>
+                        <p>
+                            For every 5 people who sign up using your link will receive 1 share.
+                        </p>
+                        <p>
+                            Requirement: 0 subscribers/followers 
+                        </p>
+                    </div>
+                </div>
+                <div class="spacer"></div>
+                <div class="col">
+                    <div class="info-block js-scroll fade-in-bottom" style="color: black">
+                        <h2 style="color: 6A39B0">Tier 2</h2>
+                        <p>
+                            For every 3 people who sign up using your link will receive 1 share.
+                        </p>
+                        <p>
+                            Requirement: 50,000 subscribers/followers 
+                        </p>
+                    </div>
+                </div>
+                <div class="spacer"></div>
+                <div class="col">
+                    <div class="info-block js-scroll fade-in-bottom" style="color: black">
+                        <h2 style="color: 6A39B0">Tier 3</h2>
+                        <p>
+                            For every 1 person who sign up using your link will receive 1 share.
+                        </p>
+                        <p>
+                            Requirement: 500,000 subscribers/followers 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
        
-        <script>
-            var rellax = new Rellax('.rellax');
-            const scrollElements = document.querySelectorAll(".js-scroll");
+    <script>
+        var rellax = new Rellax('.rellax');
+        const scrollElements = document.querySelectorAll(".js-scroll");
 
-            const elementInView = (el, dividend = 1) => {
-                const elementTop = el.getBoundingClientRect().top;
+        const elementInView = (el, dividend = 1) => {
+            const elementTop = el.getBoundingClientRect().top;
 
-                return (
-                    elementTop <=
-                    (window.innerHeight || document.documentElement.clientHeight) / dividend);
-            };
+            return (
+                elementTop <=
+                (window.innerHeight || document.documentElement.clientHeight) / dividend);
+        };
 
-            const elementOutofView = (el) => {
-                const elementTop = el.getBoundingClientRect().top;
+        const elementOutofView = (el) => {
+            const elementTop = el.getBoundingClientRect().top;
 
-                return (
-                    elementTop > (window.innerHeight || document.documentElement.clientHeight)
-                );
-            };
+            return (
+                elementTop > (window.innerHeight || document.documentElement.clientHeight)
+            );
+        };
 
-            const displayScrollElement = (element) => {
-                element.classList.add("scrolled");
-            };
+        const displayScrollElement = (element) => {
+            element.classList.add("scrolled");
+        };
 
-            const hideScrollElement = (element) => {
-                element.classList.remove("scrolled");
-            };
+        const hideScrollElement = (element) => {
+            element.classList.remove("scrolled");
+        };
 
-            const handleScrollAnimation = () => {
-                scrollElements.forEach((el) => {
-                    if (elementInView(el, 1.25)) {
-                    displayScrollElement(el);
-                    } else if (elementOutofView(el)) {
-                    hideScrollElement(el)
-                    }
-                })
-            }
+        const handleScrollAnimation = () => {
+            scrollElements.forEach((el) => {
+                if (elementInView(el, 1.25)) {
+                displayScrollElement(el);
+                } else if (elementOutofView(el)) {
+                hideScrollElement(el)
+                }
+            })
+        }
 
-            window.addEventListener("scroll", () => { 
-                handleScrollAnimation();
-            });
+        window.addEventListener("scroll", () => { 
+            handleScrollAnimation();
+        });
 
-            function openNav() {
-                var closeNav = $('.sidenav-close-button');
-                document.getElementById("sidenav").style.marginRight = "0";	
-                closeNav.toggleClass('rotate');
-            }
+        function openNav() {
+            var closeNav = $('.sidenav-close-button');
+            document.getElementById("sidenav").style.marginRight = "0";	
+            closeNav.toggleClass('rotate');
+        }
 
-            function closeNav() {
-                var closeNav = $('.sidenav-close-button');
-                document.getElementById("sidenav").style.marginRight = "-321";	
-                closeNav.toggleClass('rotate');
-            }
-        </script>
+        function closeNav() {
+            var closeNav = $('.sidenav-close-button');
+            document.getElementById("sidenav").style.marginRight = "-321";	
+            closeNav.toggleClass('rotate');
+        }
+    </script>
     </body>
 </html>
