@@ -1,1 +1,91 @@
-<html></html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="styles.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <title>Pocket Properties</title>
+        <link rel="manifest" href="manifest.json">
+        <link rel="apple-touch-icon" href="Apple-touch-icon.png"> 
+        <meta name="apple-mobile-web-app-status-bar-style" content="white">   
+        <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+        <script src="https://kit.fontawesome.com/984a991b1b.js" crossorigin="anonymous"></script>
+
+   	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head> 
+    <body>
+        <div class="page-content">
+            <nav>
+                <img class="logo" src="assets/logo_purple.svg" alt="logo" width="75px">
+                <a class="large-screen-nav" href="index.html">Home</a>
+                <a class="large-screen-nav" href="https://wefunder.com/pocket.properties.app">Invest</a>
+                <a class="large-screen-nav" href="alpha-release-page.html">Alpha Release</a>
+                <a class="large-screen-nav" id="active" href="#">Sell Your Property</a>
+                <a class="large-screen-nav" href="affiliate-page.html">Become an Affiliate</a>
+                <img class="sidenav-open-button" src="assets/custom-icons/navbar-icon.svg" onclick="openNav()" alt="navbar-expand">
+            </nav>
+            <div class="sidenav" id="sidenav">
+                <img id="sidenav-close-button" class="sidenav-close-button" src="assets/custom-icons/white-sidenav-icon.svg" onclick="closeNav()" alt="navbar-expand">
+                <a class="large-screen-nav" href="index.html">Home</a>
+                <a class="large-screen-nav" href="https://wefunder.com/pocket.properties.app">Invest</a>
+                <a class="large-screen-nav" href="alpha-release-page.html">Alpha Release</a>
+                <a class="large-screen-nav" id="active_sidebar" href="#">Sell Your Property</a>
+                <a class="large-screen-nav" href="affiliate-page.html">Become an Affiliate</a>
+            </div>
+    <script>
+        var rellax = new Rellax('.rellax');
+        const scrollElements = document.querySelectorAll(".js-scroll");
+
+        const elementInView = (el, dividend = 1) => {
+            const elementTop = el.getBoundingClientRect().top;
+
+            return (
+                elementTop <=
+                (window.innerHeight || document.documentElement.clientHeight) / dividend);
+        };
+
+        const elementOutofView = (el) => {
+            const elementTop = el.getBoundingClientRect().top;
+
+            return (
+                elementTop > (window.innerHeight || document.documentElement.clientHeight)
+            );
+        };
+
+        const displayScrollElement = (element) => {
+            element.classList.add("scrolled");
+        };
+
+        const hideScrollElement = (element) => {
+            element.classList.remove("scrolled");
+        };
+
+        const handleScrollAnimation = () => {
+            scrollElements.forEach((el) => {
+                if (elementInView(el, 1.25)) {
+                displayScrollElement(el);
+                } else if (elementOutofView(el)) {
+                hideScrollElement(el)
+                }
+            })
+        }
+
+        window.addEventListener("scroll", () => { 
+            handleScrollAnimation();
+        });
+
+        function openNav() {
+            var closeNav = $('.sidenav-close-button');
+            document.getElementById("sidenav").style.marginRight = "0";	
+            closeNav.toggleClass('rotate');
+        }
+
+        function closeNav() {
+            var closeNav = $('.sidenav-close-button');
+            document.getElementById("sidenav").style.marginRight = "-321";	
+            closeNav.toggleClass('rotate');
+        }
+    </script>
+    </body>
+</html>
