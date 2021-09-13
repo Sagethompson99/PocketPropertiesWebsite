@@ -95,6 +95,10 @@ button {
     border-bottom: 2px solid var(--companyColor);
 }
 
+#active_sidebar {
+    color: #6DDC80;
+}
+
 .logo {
     margin-right: 20;
     margin-bottom: -12;
