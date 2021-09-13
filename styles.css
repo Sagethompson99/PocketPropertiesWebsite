@@ -66,12 +66,11 @@ button {
     scale: 1.03;
 }
 
-
 .sidenav {
     height: 100%;
     width: 300;
     position: fixed;
-    z-index: 9999;
+    z-index: 10000;
     top: 0;
     right: 0;
     background-color: var(--companyColor);
