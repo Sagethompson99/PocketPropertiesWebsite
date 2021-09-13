@@ -56,7 +56,7 @@
                 <h1 style="color: white; font-size: 40; margin: 80 0 80 0">What's so good about us, anyways?</h1>
                 <div class="row">
                     <div class="col">
-                        <div class="info-block" style="color: white">
+                        <div class="info-block js-scroll fade-in-bottom" style="color: white">
                             <img src="assets/custom-icons/trade-icon.svg" width="100px">
                             <h2>Buy, Sell, and Trade</h2>
                             <p>Utilize data-driven liquidity 
@@ -68,7 +68,7 @@
                     </div>
                     <div class="spacer"></div>
                     <div class="col">
-                        <div class="info-block" style="color: white">
+                        <div class="info-block js-scroll fade-in-bottom" style="color: white">
                             <img src="assets/custom-icons/fraction-icon.svg" width="100px">
                             <h2>Fractional Ownership</h2>
                             <p>Become a partial owner of any of
@@ -81,7 +81,7 @@
                     </div>
                     <div class="spacer"></div>
                     <div class="col">
-                        <div class="info-block" style="color: white">
+                        <div class="info-block js-scroll fade-in-bottom" style="color: white">
                             <img src="assets/custom-icons/easy-icon.svg" width="100px">
                             <h2>Easy to Use</h2>
                             <p>Instantly deposit funds, purchase
@@ -94,7 +94,7 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <div class="info-block" style="color: white">
+                        <div class="info-block js-scroll fade-in-bottom" style="color: white">
                             <img src="assets/custom-icons/passive-icon.svg" width="100px">
                             <h2>Truly Passive</h2>
                             <p>Take advantage of truly passive 
@@ -106,7 +106,7 @@
                     </div>
                     <div class="spacer"></div>
                     <div class="col">
-                        <div class="info-block" style="color: white">
+                        <div class="info-block js-scroll fade-in-bottom" style="color: white">
                             <img src="assets/custom-icons/growth-icon.svg" width="100px">
                             <h2>Track your Earnings</h2>
                             <p>Store and track your shares in-app
@@ -116,7 +116,7 @@
                     </div>
                     <div class="spacer"></div>
                     <div class="col">
-                        <div class="info-block" style="color: white">
+                        <div class="info-block js-scroll fade-in-bottom" style="color: white">
                             <img src="assets/custom-icons/mobile-icon.svg" width="100px">
                             <h2>Mobile-Friendly</h2>
                             <p>The first mobile-focused real
@@ -133,7 +133,7 @@
             <h1 style="color: #6A39B0; font-size: 40; margin: 80 0 100 0">Our Impact</h1>
             <div class="row">
                 <div class="col">
-                    <div class="info-block" style="color: white">
+                    <div class="info-block js-scroll fade-in-bottom" style="color: white">
                         <img src="assets/custom-icons/democratization-icon.svg" width="100px">
                         <h2 style="color: 6A39B0">Democratization</h2>
                         <p style="color: black">By breaking real estate into smaller
@@ -148,7 +148,7 @@
                 </div>
                 <div class="spacer"></div>
                 <div class="col">
-                    <div class="info-block" style="color: white">
+                    <div class="info-block js-scroll fade-in-bottom" style="color: white">
                         <img src="assets/custom-icons/housing-icon.svg" width="100px">
                         <h2 style="color: 6A39B0">Affordable and Income-Based Housing</h2>
                         <p style="color: black">Many of the residential properties
@@ -163,7 +163,7 @@
                 </div>
                 <div class="spacer"></div>
                 <div class="col">
-                    <div class="info-block" style="color: white">
+                    <div class="info-block js-scroll fade-in-bottom" style="color: white">
                         <img src="assets/custom-icons/leadership-icon.svg" width="100px">
                         <h2 style="color: 6A39B0">Leadership</h2>
                         <p style="color: black">Our leaders created Pocket
@@ -180,6 +180,45 @@
 
         <script>
             var rellax = new Rellax('.rellax');
+            const scrollElements = document.querySelectorAll(".js-scroll");
+
+            const elementInView = (el, dividend = 1) => {
+                const elementTop = el.getBoundingClientRect().top;
+
+                return (
+                    elementTop <=
+                    (window.innerHeight || document.documentElement.clientHeight) / dividend);
+            };
+
+            const elementOutofView = (el) => {
+                const elementTop = el.getBoundingClientRect().top;
+
+                return (
+                    elementTop > (window.innerHeight || document.documentElement.clientHeight)
+                );
+            };
+
+            const displayScrollElement = (element) => {
+                element.classList.add("scrolled");
+            };
+
+            const hideScrollElement = (element) => {
+                element.classList.remove("scrolled");
+            };
+
+            const handleScrollAnimation = () => {
+                scrollElements.forEach((el) => {
+                    if (elementInView(el, 1.25)) {
+                    displayScrollElement(el);
+                    } else if (elementOutofView(el)) {
+                    hideScrollElement(el)
+                    }
+                })
+            }
+
+            window.addEventListener("scroll", () => { 
+                handleScrollAnimation();
+            });
         </script>
     </body>
 </html>
