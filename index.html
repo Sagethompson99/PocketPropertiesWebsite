@@ -21,7 +21,16 @@
                 <a class="large-screen-nav" href="alpha-release-page.html">Alpha Release</a>
                 <a class="large-screen-nav" href="sell-page.html">Sell Your Property</a>
                 <a class="large-screen-nav" href="affiliate-page.html">Become an Affiliate</a>
+                <img class="sidenav-open-button" src="assets/custom-icons/navbar-icon.svg" onclick="openNav()" alt="navbar-expand">
             </nav>
+            <div class="sidenav" id="sidenav">
+                <img id="sidenav-close-button" class="sidenav-close-button" src="assets/custom-icons/white-sidenav-icon.svg" onclick="closeNav()" alt="navbar-expand">
+                <a class="large-screen-nav" id="active" href="#">Home</a>
+                <a class="large-screen-nav" href="https://wefunder.com/pocket.properties.app">Invest</a>
+                <a class="large-screen-nav" href="alpha-release-page.html">Alpha Release</a>
+                <a class="large-screen-nav" href="sell-page.html">Sell Your Property</a>
+                <a class="large-screen-nav" href="affiliate-page.html">Become an Affiliate</a>
+            </div>
             <div class="row" id="homepage-top-content">
                 <div class="col">
                     <h1 id="main-title">Real Estate Investing for Everyone.</h1>
@@ -219,6 +228,18 @@
             window.addEventListener("scroll", () => { 
                 handleScrollAnimation();
             });
+
+            function openNav() {
+                var closeNav = $('.sidenav-close-button');
+                document.getElementById("sidenav").style.marginRight = "0";	
+                closeNav.toggleClass('rotate');
+            }
+
+            function closeNav() {
+                var closeNav = $('.sidenav-close-button');
+                document.getElementById("sidenav").style.marginRight = "-321";	
+                closeNav.toggleClass('rotate');
+            }
         </script>
     </body>
 </html>
