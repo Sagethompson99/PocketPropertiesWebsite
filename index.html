@@ -7,16 +7,179 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
         <title>Pocket Properties</title>
         <meta name="apple-mobile-web-app-status-bar-style" content="white">   
+        <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
         <script src="https://kit.fontawesome.com/984a991b1b.js" crossorigin="anonymous"></script>
+
+   	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head> 
     <body>
-        <nav>
-            <img class="logo" src="assets/logo_purple.svg" alt="logo" width="60px">
-            <a class="active" href="#">Home</a>
-            <a href="https://wefunder.com/pocket.properties.app">Invest</a>
-            <a href="alpha-release-page.html">Alpha Release</a>
-            <a href="sell-page.html">Sell Your Property</a>
-            <a href="affiliate-page.html">Become an Affiliate</a>
-        </nav>
+        <div class="page-content">
+            <nav>
+                <img class="logo" src="assets/logo_purple.svg" alt="logo" width="75px">
+                <a class="large-screen-nav" id="active" href="#">Home</a>
+                <a class="large-screen-nav" href="https://wefunder.com/pocket.properties.app">Invest</a>
+                <a class="large-screen-nav" href="alpha-release-page.html">Alpha Release</a>
+                <a class="large-screen-nav" href="sell-page.html">Sell Your Property</a>
+                <a class="large-screen-nav" href="affiliate-page.html">Become an Affiliate</a>
+            </nav>
+            <div class="row" id="homepage-top-content">
+                <div class="col">
+                    <h1 id="main-title">Real Estate Investing for Everyone.</h1>
+                    <p>
+                        Buy and trade shares of real estate for less than $10. 
+                        Truly passive real estate investing with no hassle or headaches. 
+                        Get one FREE property share when you sign up to be one the first 5,000 pre-launch users!
+                    </p>
+                    <div class="row" style="padding: 10 0 10 0">
+                        <div class="col">
+                            <input id="email-input" type="email" placeholder="Enter your email">
+                        </div>
+                        <div class="col">
+                            <button class="primary-button" id="claim-share-button">Claim Free Share</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="spacer"></div>
+                <div class="col">
+                    <img class="rellax phone-image" data-rellax-speed="3" src="assets/product-images/propertypage.png" alt="property page screenshot" width="36%">
+                    <img class="rellax phone-image-front" data-rellax-speed="7" src="assets/product-images/homepage.png" alt="dashboard page screenshot" width="40%">
+                    <img class="rellax phone-image" data-rellax-speed="2" src="assets/product-images/purchasepage.png" style="z-index: -1" alt="purchase page screenshot" width="36%">
+                </div>
+            </div>
+        </div>
+
+        <div id="section-2-home">
+            <img src="assets/triangle.svg" width="100%">
+        </div>
+        <div style="background-color: #6A39B0; margin-top: -1px">
+            <div class="page-content" style="padding-bottom: 80">
+                <h1 style="color: white; font-size: 40; margin: 80 0 80 0">What's so good about us, anyways?</h1>
+                <div class="row">
+                    <div class="col">
+                        <div class="info-block" style="color: white">
+                            <img src="assets/custom-icons/trade-icon.svg" width="100px">
+                            <h2>Buy, Sell, and Trade</h2>
+                            <p>Utilize data-driven liquidity 
+                                generated within our secondary
+                                marketplace and capture the 
+                                appreciation of your asset
+                            </p>
+                        </div>
+                    </div>
+                    <div class="spacer"></div>
+                    <div class="col">
+                        <div class="info-block" style="color: white">
+                            <img src="assets/custom-icons/fraction-icon.svg" width="100px">
+                            <h2>Fractional Ownership</h2>
+                            <p>Become a partial owner of any of
+                                The various properties we offer from 
+                                all around the country. We'll even 
+                                pay out monthly rent dividends 
+                                directly to you
+                            </p>
+                        </div>
+                    </div>
+                    <div class="spacer"></div>
+                    <div class="col">
+                        <div class="info-block" style="color: white">
+                            <img src="assets/custom-icons/easy-icon.svg" width="100px">
+                            <h2>Easy to Use</h2>
+                            <p>Instantly deposit funds, purchase
+                                Shares, search by location, and
+                                Analyze potential investments all
+                                From your phone
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="info-block" style="color: white">
+                            <img src="assets/custom-icons/passive-icon.svg" width="100px">
+                            <h2>Truly Passive</h2>
+                            <p>Take advantage of truly passive 
+                                wealth building. Property management
+                                is handled on your behalf by our board 
+                                of skilled real-estate analysts
+                            </p>
+                        </div>
+                    </div>
+                    <div class="spacer"></div>
+                    <div class="col">
+                        <div class="info-block" style="color: white">
+                            <img src="assets/custom-icons/growth-icon.svg" width="100px">
+                            <h2>Track your Earnings</h2>
+                            <p>Store and track your shares in-app
+                                Or store them in a supported wallet
+                            </p>
+                        </div>
+                    </div>
+                    <div class="spacer"></div>
+                    <div class="col">
+                        <div class="info-block" style="color: white">
+                            <img src="assets/custom-icons/mobile-icon.svg" width="100px">
+                            <h2>Mobile-Friendly</h2>
+                            <p>The first mobile-focused real
+                                Estate investing app with 
+                                Fractional shares
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-content" style="padding-bottom: 200">
+            <h1 style="color: #6A39B0; font-size: 40; margin: 80 0 100 0">Our Impact</h1>
+            <div class="row">
+                <div class="col">
+                    <div class="info-block" style="color: white">
+                        <img src="assets/custom-icons/democratization-icon.svg" width="100px">
+                        <h2 style="color: 6A39B0">Democratization</h2>
+                        <p style="color: black">By breaking real estate into smaller
+                            Pieces, we are able to eliminate cost
+                            As a barrier of entry for investors. This
+                            Means more people have access to
+                            Real estate investing, allowing for a 
+                            Property’s value to truly be set by the
+                            Market
+                        </p>
+                    </div>
+                </div>
+                <div class="spacer"></div>
+                <div class="col">
+                    <div class="info-block" style="color: white">
+                        <img src="assets/custom-icons/housing-icon.svg" width="100px">
+                        <h2 style="color: 6A39B0">Affordable and Income-Based Housing</h2>
+                        <p style="color: black">Many of the residential properties
+                            Available to buy & trade on the Pocket 
+                            Properties platform will be Income-
+                            based and Section 8 housing, We help 
+                            under-served communities not only through 
+                            democratization but also by providing 
+                            affordable housing opportunities
+                        </p>
+                    </div>
+                </div>
+                <div class="spacer"></div>
+                <div class="col">
+                    <div class="info-block" style="color: white">
+                        <img src="assets/custom-icons/leadership-icon.svg" width="100px">
+                        <h2 style="color: 6A39B0">Leadership</h2>
+                        <p style="color: black">Our leaders created Pocket
+                            Properties with the intent of building
+                            Wealth for under-served communities
+                            And ending the plight of gentrification 
+                            that Leads to lost affordable housing 
+                            opportunities
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var rellax = new Rellax('.rellax');
+        </script>
     </body>
 </html>
