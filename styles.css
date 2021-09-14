@@ -211,6 +211,10 @@ button:hover{
         margin-bottom: -12vh;
     }
 
+    #top-house-container {
+        margin-top: 15vh;
+    }
+
     .large-screen-nav {
         display: none;
     }
