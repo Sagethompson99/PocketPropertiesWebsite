@@ -215,6 +215,11 @@ button:hover{
         margin-top: 15vh;
     }
 
+    #thumbs-up-container {
+        margin-top: 20vh;
+        margin-bottom: -10vh;
+    }
+
     .large-screen-nav {
         display: none;
     }
