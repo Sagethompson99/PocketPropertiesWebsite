@@ -1,6 +1,6 @@
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1.0, user-scalable=0"">
         <link href="styles.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
@@ -51,8 +51,8 @@
                     </div>
                 </div>
                 <div class="spacer"></div>
-                <div class="col">
-                    <img class="rellax phone-image" data-rellax-speed="3" src="assets/product-images/propertypage.png" alt="property page screenshot" width="36%">
+                <div class="col" id="phone-container">
+                    <img class="rellax phone-image" data-rellax-speed="3" src="assets/product-images/propertypage.png" style="z-index: -1" alt="property page screenshot" width="36%">
                     <img class="rellax phone-image-front" data-rellax-speed="7" src="assets/product-images/homepage.png" alt="dashboard page screenshot" width="40%">
                     <img class="rellax phone-image" data-rellax-speed="2" src="assets/product-images/purchasepage.png" style="z-index: -1" alt="purchase page screenshot" width="36%">
                 </div>
@@ -219,11 +219,11 @@
 
             const handleScrollAnimation = () => {
                 scrollElements.forEach((el) => {
-                    if (elementInView(el, 1.25)) {
-                    displayScrollElement(el);
-                    } else if (elementOutofView(el)) {
-                    hideScrollElement(el)
-                    }
+                    if (elementInView(el, 1.25)) 
+                        displayScrollElement(el);
+                    
+                    else if (elementOutofView(el)) 
+                        hideScrollElement(el)
                 })
             }
 

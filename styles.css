@@ -206,6 +206,11 @@ button:hover{
         margin-top: 60px;
     }
 
+    #phone-container {
+        margin-top: 45vh;
+        margin-bottom: -12vh;
+    }
+
     .large-screen-nav {
         display: none;
     }
